@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اليوم الوطني السعودي ٩٤</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #e6f7e6, #e6ffe6);
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(to right, #006400, #008000);
+            color: white;
+            padding: 1.5rem 1rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0.5rem;
+        }
+
+        nav button {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+        }
+
+        nav button:hover {
+            color: #e6ffe6;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+
+        .card-header {
+            background: linear-gradient(to right, #008000, #006400);
+            color: white;
+            padding: 1rem;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .grid-cols-1 {
+            grid-template-columns: 1fr;
+        }
+
+        @media (min-width: 768px) {
+            .grid-cols-2 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .grid-cols-3 {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .achievement, .project {
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+        }
+
+        .achievement img, .project img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+            cursor: pointer;
+        }
+
+        footer {
+            background: linear-gradient(to right, #006400, #008000);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 10% auto;
+            padding: 20px;
+            border-radius: 0.5rem;
+            max-width: 80%;
+        }
+
+        .modal img {
+            width: 100%;
+            height: auto;
+            border-radius: 0.5rem;
+        }
+
+        .close {
+            color: #aaa;
+            float: left;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: #000;
+        }
+
+        .text-green {
+            color: #006400;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>اليوم الوطني السعودي ٩٤</h1>
+        <p>نحلم ونحقق</p>
+        <nav>
+            <ul>
+                <li><button onclick="showComingSoon()">لماذا نحتفل باليوم الوطني</button></li>
+                <li><button onclick="showComingSoon()">تاريخ المملكة</button></li>
+                <li><button onclick="showComingSoon()">ملوك المملكة</button></li>
+                <li><button onclick="showComingSoon()">رؤية 2030</button></li>
+                <li><button onclick="showComingSoon()">إنجازات المملكة</button></li>
+                <li><button onclick="showComingSoon()">المشاريع الكبرى</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">لماذا نحتفل باليوم الوطني</h2>
+            </div>
+            <div class="card-content">
+                <img src="https://cdn.discordapp.com/attachments/1275091316245528576/1288217780289536030/IMG_0054.jpg?ex=66f461cc&is=66f3104c&hm=c49b0a355d5e1ecffe0a4e229742a825a7d54c43d15392f0ea0b7829e933b795&" alt="اليوم الوطني" onclick="openModal(this.src)" style="width: 100%; max-width: 400px; height: auto; border-radius: 0.5rem; margin-bottom: 1rem; cursor: pointer;">
+                <p>نحتفل باليوم الوطني السعودي لعدة أسباب مهمة:</p>
+                <ul>
+                    <li>إحياء <span class="text-green">ذكرى توحيد المملكة</span> على يد الملك عبد العزيز آل سعود في 23 سبتمبر 1932</li>
+                    <li>تعزيز <span class="text-green">الهوية الوطنية</span> والانتماء للوطن وترسيخ قيم الولاء والوحدة</li>
+                    <li>الاحتفال <span class="text-green">بإنجازات المملكة</span> وتطورها على مر السنين في مختلف المجالات</li>
+                    <li>تجديد <span class="text-green">الولاء للقيادة</span> والوطن وتأكيد الالتزام بمواصلة مسيرة التنمية والتقدم</li>
+                    <li>فرصة لتعريف <span class="text-green">الأجيال الجديدة</span> بتاريخ المملكة وتراثها وقيمها الأصيلة</li>
+                    <li>تعزيز <span class="text-green">الترابط الاجتماعي</span> وروح الفخر الوطني بين المواطنين</li>
+                    <li>إبراز <span class="text-green">مكانة المملكة</span> الإقليمية والدولية وإنجازاتها في مختلف المجالات</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">تاريخ المملكة</h2>
+            </div>
+            <div class="card-content">
+                <img src="https://cdn.discordapp.com/attachments/1287036414751412377/1287446765984940193/6_20240922185459.png?ex=66f436bc&is=66f2e53c&hm=0095bcc98b4f8d4f035b56791409926e0355bfb58131346ec1412388f7b5dc1c&" alt="تاريخ المملكة" onclick="openModal(this.src)" style="width: 100%; max-width: 400px; height: auto; border-radius: 0.5rem; margin-bottom: 1rem; cursor: pointer;">
+                <h3 class="text-green">أهم الأحداث التاريخية:</h3>
+                <ul>
+                    <li><span class="text-green">1744:</span> تأسيس الدولة السعودية الأولى بقيادة الإمام محمد بن سعود</li>
+                    <li><span class="text-green">1824:</span> تأسيس الدولة السعودية الثانية بقيادة الإمام تركي بن عبد الله بن محمد</li>
+                    <li><span class="text-green">1902:</span> استعادة الرياض على يد الملك عبد العزيز وبداية توحيد المملكة</li>
+                    <li><span class="text-green">1932:</span> إعلان توحيد المملكة العربية السعودية رسمياً</li>
+                    <li><span class="text-green">1938:</span> اكتشاف النفط في المنطقة الشرقية وبداية عصر جديد من التنمية</li>
+                    <li><span class="text-green">1960:</span> تأسيس منظمة الدول المصدرة للنفط (أوبك) بمشاركة المملكة</li>
+                    <li><span class="text-green">2005:</span> انضمام المملكة إلى منظمة التجارة العالمية</li>
+                    <li><span class="text-green">2016:</span> إطلاق رؤية المملكة 2030 للتنمية والتطوير الشامل</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">ملوك المملكة</h2>
+            </div>
+            <div class="card-content">
+                <img src="https://cdn.discordapp.com/attachments/1287036414751412377/1287446767159476234/7_20240922191252.png?ex=66f436bc&is=66f2e53c&hm=c51c35dc34cd261e89679a7be2675fe7242d18afc1a10fa20d026c9792aec87b&" alt="ملوك المملكة" onclick="openModal(this.src)" style="width: 100%; max-width: 400px; height: auto; border-radius: 0.5rem; margin-bottom: 1rem; cursor: pointer;">
+                <ul>
+                    <li><span class="text-green">الملك عبد العزيز آل سعود (1932-1953):</span> مؤسس المملكة الحديثة</li>
+                    <li><span class="text-green">الملك سعود بن عبد العزيز آل سعود (1953-1964):</span> أول وزير للمعارف</li>
+                    <li><span class="text-green">الملك فيصل بن عبد العزيز آل سعود (1964-1975):</span> رائد التنمية والتحديث</li>
+                    <li><span class="text-green">الملك خالد بن عبد العزيز آل سعود (1975-1982):</span> قائد النهضة الاقتصادية</li>
+                    <li><span class="text-green">الملك فهد بن عبد العزيز آل سعود (1982-2005):</span> خادم الحرمين الشريفين</li>
+                    <li><span class="text-green">الملك عبد الله بن عبد العزيز آل سعود (2005-2015):</span> مؤسس الحوار الوطني</li>
+                    <li><span class="text-green">الملك سلمان بن عبد العزيز آل سعود (2015-الآن):</span> قائد التحول والرؤية</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">رؤية 2030</h2>
+            </div>
+            <div class="card-content">
+                <img src="https://cdn.discordapp.com/attachments/1275091316245528576/1288246540132946063/IMG_0055.jpg?ex=66f47c95&is=66f32b15&hm=fed782e1d2f29e9b6d1faab39c25d1778d6160b3f686d28073ce0c9ca985cd03&" alt="رؤية 2030" onclick="openModal(this.src)" style="width: 100%; max-width: 400px; height: auto; border-radius: 0.5rem; margin-bottom: 1rem; cursor: pointer;">
+                <p><span class="text-green">رؤية المملكة 2030</span> هي خطة طموحة لتحويل المملكة وتنويع اقتصادها. تشمل أهدافها الرئيسية:</p>
+                <ul>
+                    <li>زيادة مساهمة <span class="text-green">القطاع الخاص</span> في الاقتصاد من 40% إلى 65% من إجمالي الناتج المحلي</li>
+                    <li>رفع نسبة <span class="text-green">الصادرات غير النفطية</span> من 16% إلى 50% من إجمالي الناتج المحلي غير النفطي</li>
+                    <li>زيادة مشاركة <span class="text-green">المرأة</span> في سوق العمل من 22% إلى 30%</li>
+                    <li>تخفيض معدل <span class="text-green">البطالة</span> من 11.6% إلى 7%</li>
+                    <li>رفع تصنيف المملكة في مؤشر <span class="text-green">الحكومات الإلكترونية</span> من المرتبة 36 إلى المراتب الـ 5 الأولى</li>
+                    <li>زيادة الطاقة الاستيعابية لاستقبال <span class="text-green">ضيوف الرحمن المعتمرين</span> من 8 ملايين إلى 30 مليون معتمر سنوياً</li>
+                    <li>رفع نسبة ممارسي <span class="text-green">الرياضة</span> مرة على الأقل أسبوعياً من 13% إلى 40% من إجمالي السكان</li>
+                    <li>رفع إنفاق الأسر على <span class="text-green">الثقافة والترفيه</span> داخل المملكة من 2.9% إلى 6%</li>
+                    <li>رفع نسبة <span class="text-green">المدخرات</span> من إجمالي الناتج المحلي للأسر من 6% إلى 10%</li>
+                    <li>رفع مساهمة <span class="text-green">المنشآت الصغيرة والمتوسطة</span> في إجمالي الناتج المحلي من 20% إلى 35%</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">إنجازات المملكة</h2>
+            </div>
+            <div class="card-content">
+                <div class="grid grid-cols-3">
+                    <div class="achievement">
+                        <img src="https://cdn.discordapp.com/attachments/1275091316245528576/1288258925455605882/IMG_0075.jpg?ex=66f4881e&is=66f3369e&hm=7cd3261f0f80498694b81541863746b8b44416c939597b85c69e5fdb58636cc1&" alt="تطوير البنية التحتية" onclick="openModal(this.src)">
+                        <p class="text-green">تطوير البنية التحتية وشبكات النقل</p>
+                    </div>
+                    <div class="achievement">
+                        <img src="https://cdn.discordapp.com/attachments/1275091316245528576/1288258152134873118/IMG_0073.webp?ex=66f48766&is=66f335e6&hm=b4a21ef9ff8dc51d4bcbf677e26d1a5341bda7330e14462edb0286d21e68641c&" alt="تحسين جودة التعليم" onclick="openModal(this.src)">
+                        <p class="text-green">تحسين جودة التعليم والرعاية الصحية</p>
+                    </div>
+                    <div class="achievement">
+                        <img src="https://cdn.discordapp.com/attachments/1275091316245528576/1288257057228853341/IMG_0072.jpg?ex=66f48661&is=66f334e1&hm=522dabb34b03193b8e0054bfd4172b0ccceec66bb2cd9ac44bd968ce01655cbd&" alt="تنويع الاقتصاد" onclick="openModal(this.src)">
+                        <p class="text-green">تنويع الاقتصاد وتقليل الاعتماد على النفط</p>
+                    </div>
+                    <div class="achievement">
+                        <img src="https://cdn.discordapp.com/attachments/1275091316245528576/1288255420846313534/IMG_0071.jpg?ex=66f484da&is=66f3335a&hm=e3f495ac4c051fba60a35b946157cbcd10799e3a39499054e09084e211ffdb74&" alt="تعزيز مكانة المملكة" onclick="openModal(this.src)">
+                        <p class="text-green">تعزيز مكانة المملكة على الساحة الدولية</p>
+                    </div>
+                    <div class="achievement">
+                        <img src="https://cdn.discordapp.com/attachments/1275091316245528576/1288254019185279008/IMG_0069.jpg?ex=66f4838c&is=66f3320c&hm=e7af91da6ea3500b7cc1ec28f98d506cfa1a6e678b29a29cc0dc75ba05e41677&" alt="تطوير قطاع الطاقة المتجددة" onclick="openModal(this.src)">
+                        <p class="text-green">تطوير قطاع الطاقة المتجددة</p>
+                    </div>
+                    <div class="achievement">
+                        <img src="https://cdn.discordapp.com/attachments/1275091316245528576/1288253423850094635/IMG_0068.jpg?ex=66f482fe&is=66f3317e&hm=09653e0b526b7b8a9c24a7f49cbf90e1128975318557c6db58b58793bf23d4c8&" alt="إطلاق برنامج الفضاء السعودي" onclick="openModal(this.src)">
+                        <p class="text-green">إطلاق برنامج الفضاء السعودي</p>
+                    </div>
+                    <div class="achievement">
+                        <img src="https://cdn.discordapp.com/attachments/1275091316245528576/1288252903089373185/IMG_0067.jpg?ex=66f48282&is=66f33102&hm=8e978f71f0460f73d19fb7157e2cd7969183a0d3800ef61a1eb9dd86a630304f&" alt="تطوير القطاع الرياضي" onclick="openModal(this.src)">
+                        <p class="text-green">تطوير القطاع الرياضي والترفيهي</p>
+                    </div>
+                    <div class="achievement">
+                        <img src="https://cdn.discordapp.com/attachments/1275091316245528576/1288251253087932481/IMG_0064.jpg?ex=66f480f9&is=66f32f79&hm=05f7063d3d59ca7e13c6f22a321b28166450212cf281af0c0faf9ad8e4da1eb6&g" alt="إنشاء صندوق الاستثمارات العامة" onclick="openModal(this.src)">
+                        <p class="text-green">إنشاء صندوق الاستثمارات العامة</p>
+                    </div>
+                    <div class="achievement">
+                        <img src="https://cdn.discordapp.com/attachments/1275091316245528576/1288250584708808755/IMG_0063.jpg?ex=66f48059&is=66f32ed9&hm=cb022d61ed393f4a94140a66f67af6e513ff93cc4f1dfd6dadc4a1e9262e9586&" alt="تطوير قطاع السياحة" onclick="openModal(this.src)">
+                        <p class="text-green">تطوير قطاع السياحة الداخلية والدولية</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">المشاريع الكبرى</h2>
+            </div>
+            <div class="card-content">
+                <div class="grid grid-cols-2">
+                    <div class="project">
+                        <img src="https://cdn.discordapp.com/attachments/1275091316245528576/1288249710083178618/IMG_0060.jpg?ex=66f47f89&is=66f32e09&hm=43ae4250905430950177add01f97f3303ec5f8077f583f31d371fcb4c302abc0&" alt="مشروع نيوم" onclick="openModal(this.src)">
+                        <h3 class="text-green">مشروع نيوم</h3>
+                        <p>مدينة المستقبل التي تجمع بين التكنولوجيا المتقدمة والاستدامة البيئية، وتشمل مشاريع فرعية مثل "ذا لاين" و"تروجينا" و"أوكسجون".</p>
+                    </div>
+                    <div class="project">
+                        <img src="https://cdn.discordapp.com/attachments/1275091316245528576/1288250143337873521/IMG_0062.jpg?ex=66f47ff0&is=66f32e70&hm=21fe4d2b98dbefcdf04ed2e02b3fed49d3d936ffda989e03265eda9de603b876&" alt="مشروع البحر الأحمر" onclick="openModal(this.src)">
+                        <h3 class="text-green">مشروع البحر الأحمر</h3>
+                        <p>وجهة سياحية فاخرة تركز على الاستدامة والحفاظ على البيئة الطبيعية، وتضم جزراً بكراً وشواطئ خلابة.</p>
+                    </div>
+                    <div class="project">
+                        <img src="https://cdn.discordapp.com/attachments/1275091316245528576/1288249033613250570/IMG_0059.png?ex=66f47ee8&is=66f32d68&hm=31c06360a521f1b640fda7da1a19caad143519be1deadab276b48dd7fabbdcb5&" alt="مشروع القدية" onclick="openModal(this.src)">
+                        <h3 class="text-green">مشروع القدية</h3>
+                        <p>مدينة ترفيهية ورياضية وثقافية ضخمة تهدف إلى تعزيز قطاع الترفيه في المملكة، وتشمل مدن ملاهي ومرافق رياضية عالمية.</p>
+                    </div>
+                    <div class="project">
+                        <img src="https://cdn.discordapp.com/attachments/1275091316245528576/1288248749256343622/IMG_0058.jpg?ex=66f47ea4&is=66f32d24&hm=bf2827ed1f6274cc22c79c72e89c1cb65aa93afc335d9787ef84447fe4b69160&" alt="مشروع أمالا" onclick="openModal(this.src)">
+                        <h3 class="text-green">مشروع أمالا</h3>
+                        <p>وجهة سياحية فاخرة على ساحل البحر الأحمر تركز على الصحة والعافية، وتقدم تجارب فريدة في مجال الفنون والثقافة.</p>
+                    </div>
+                    <div class="project">
+                        <img src="https://cdn.discordapp.com/attachments/1275091316245528576/1288248469689208886/IMG_0057.jpg?ex=66f47e61&is=66f32ce1&hm=d5508c056033a3bff07200dd24f19206204507a0b3716f4e7e6a626bdb2baf40&" alt="مشروع المكعب" onclick="openModal(this.src)">
+                        <h3 class="text-green">مشروع المكعب (ذا كيوب)</h3>
+                        <p>مبنى فريد على شكل مكعب في وسط الرياض، يضم مساحات للمكاتب والفنادق والمطاعم، ويعد معلماً معمارياً مميزاً.</p>
+                    </div>
+                    <div class="project">
+                        <img src="https://cdn.discordapp.com/attachments/1287036414751412377/1287467285065498704/image.png?ex=66f449d8&is=66f2f858&hm=d6e9aa9aaeab796ac34f27bcd42743d4e002e0a80fef0d1059d630ac90a0b23b&" alt="مشروع ذا لاين" onclick="openModal(this.src)">
+                        <h3 class="text-green">مشروع ذا لاين</h3>
+                        <p>مدينة خطية ثورية بدون سيارات وبدون انبعاثات كربونية، جزء من مشروع نيوم، وتمتد لمسافة 170 كم بتقنيات مستقبلية.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© <span id="current-year"></span> جميع الحقوق محفوظة لـ عبدالملك إسماعيل العربي والطلاب المشاركين معه: عبدالله وليد ووسام المجنوني</p>
+        <button onclick="showInfo()">اليوم الوطني ٩٤</button>
+    </footer>
+
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modalImage" src="" alt="صورة مكبرة">
+        </div>
+    </div>
+
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeInfoModal()">&times;</span>
+            <h2>معلومات عن الموقع</h2>
+            <p>تمت برمجة هذا الموقع من قبل عبد الملك إسماعيل العربي</p>
+        </div>
+    </div>
+
+    <div id="comingSoonModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeComingSoonModal()">&times;</span>
+            <h2>قريباً</h2>
+            <p>هذه الميزة قيد التطوير وستكون متاحة قريباً.</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        function openModal(imgSrc) {
+            var modal = document.getElementById("imageModal");
+            var modalImg = document.getElementById("modalImage");
+            modal.style.display = "block";
+            modalImg.src = imgSrc;
+        }
+
+        function closeModal() {
+            document.getElementById("imageModal").style.display = "none";
+        }
+
+        function showInfo() {
+            document.getElementById("infoModal").style.display = "block";
+        }
+
+        function closeInfoModal() {
+            document.getElementById("infoModal").style.display = "none";
+        }
+
+        function showComingSoon() {
+            document.getElementById("comingSoonModal").style.display = "block";
+        }
+
+        function closeComingSoonModal() {
+            document.getElementById("comingSoonModal").style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == document.getElementById("imageModal")) {
+                closeModal();
+            }
+            if (event.target == document.getElementById("infoModal")) {
+                closeInfoModal();
+            }
+            if (event.target == document.getElementById("comingSoonModal")) {
+                closeComingSoonModal();
+            }
+        }
+    </script>
+</body>
+</html>
